@@ -1,0 +1,285 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="~/Content/image/favicon.ico" type="image/icon type">
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <!-- ICON NEEDS FONT AWESOME FOR CHEVRON UP ICON -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+
+    <title>IMEXCO - @ViewBag.Title </title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body class="container">
+    <header class="navbar navbar-dark bg-dark ">
+        <a class="navbar-brand" href="#">
+            <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/logo_white.png" width="30" height="30" alt="logo">
+            BootstrapBay
+        </a>
+        @*<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-2" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>*@
+        @*<div class="collapse navbar-collapse" id="navbar-list-2">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+            </ul>
+        </div>*@
+    </header>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="~/Home">
+            @*Navbar*@
+            <img src="~/Content/image/method-draw-image (5).svg" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="~/Home">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Business</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        Our clients
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="~/Home/About">
+                        About US
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="~/Home/Contact">
+                        Contact
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="~/Home/newc">
+                        wow
+                    </a>
+                </li>
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        @Html.ActionLink("Home", "Index", "Home")
+                        @Html.ActionLink("About", "About", "Home")
+                        @Html.ActionLink("Contact", "Contact", "Home")
+                        @Html.Partial("_LoginPartial")
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+
+                </li>
+            </ul>
+            @*<form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>*@
+        </div>
+    </nav>
+
+
+    <br />
+
+
+
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+
+
+
+
+
+        <footer class="page-footer font-small mdb-color lighten-3 pt-4   ">
+
+
+
+
+            <!-- Footer Links -->
+            <div class="container text-center text-md-left">
+
+                <!-- Grid row -->
+                <div class="row">
+
+
+
+                    <hr class="clearfix w-100 d-md-none">
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+                        <!-- Links -->
+                        <h5 class="font-weight-bold text-uppercase mb-4 subfoot gox">About</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <p>
+                                    <a href="#!" class="foot">PROJECTS</a>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <a href="aboutahi.html" target="_blank" class="foot">ABOUT US</a>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <a href="soon.html" target="_blank" class="foot">BLOG</a>
+                                </p>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none">
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+                        <!-- Contact details -->
+                        <h5 class="font-weight-bold text-uppercase mb-4 subfoot gox">Address</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <p class="">
+
+                                    <i class="icon-home mr-3"></i>
+                                    Bid, 148,semouha - Garden city - Alexandria - Egypt
+                                    @*Toson-Abo Kair,Alexandira-&nbsp;&nbsp;   Egypt*@
+                                </p>
+                            </li>
+
+
+                            <li>
+                                <p>
+                                    <i class="icon-envelope mr-3"></i> <a href="mailto:imexco2002@gmail.com" class="info">imexco2002@gmail.com</a>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <a href="tel:002 01220000394"><i class="icon-phone"></i> <span>+2 01220000394</span></a>
+                                    @*01220000394/002*@
+                                </p>
+                            </li>
+
+                            @*<li>
+                                <p>
+                                    <i class="fas fa-print mr-3"></i>(+2) (03) 5613070
+                                </p>
+                            </li>*@
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none">
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
+
+                        <!-- Social buttons -->
+                        <h5 class="font-weight-bold text-uppercase mb-4 subfoot gox">Follow Us</h5>
+
+
+                        <!-- Facebook -->
+                        <a href="#" target="_blank">
+                            @*<i class="fab fa-facebook-f fa-3x socialx"></i>*@
+                            <i class="icon-facebook icon-3x"></i>
+
+                        </a>
+  
+
+                        <br>
+                        <!-- Twitter -->
+                        <a href="#" target="_blank">
+                            <i class=" icon-twitter icon-3x" style="color:#6299F1"></i><a>
+
+                                <br>
+                                <!-- instagram -->
+
+                                <a href="#" target="_blank">
+                                    <i class="icon-instagram icon-3x"></i><a>
+
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+            </div>
+            <!-- Footer Links -->
+            <!-- Copyright -->
+            <div class="bottom-footer-area">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-md-12 copy">
+                            <div class="footer-copyright text-center py-3 subfoot">
+                                Copyright &copy; @DateTime.Now.Year ,<strong style="color:#4d5dfb">IMEXCO</strong>. All Copyright Reserved.
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Copyright -->
+
+        </footer>
+
+
+
+        <!-- Return to Top -->
+        <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+
+
+        
+        <hr />
+
+
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    @RenderSection("style", required: false)
+<script src="~/Scripts/12.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+﻿@using petroleum_website.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Log in";
+}
+
+  <link href="~/Content/login.css" rel="stylesheet" />
+
+
+
+
+ 
+
+
+ 
+@using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="section">
+        <div class="container">
+            <div class="row full-height justify-content-center">
+                <div class="col-12 text-center align-self-center py-5">
+                    <div class="section pb-5 pt-5 pt-sm-2 text-center">
+                          <label for="reg-log"></label>
+                        <div class="card-3d-wrap mx-auto">
+                            <div class="card-3d-wrapper">
+                                <!--####### Login #######-->
+
+                                <div class="card-front">
+                                    <div class="center-wrap">
+                                        <div class="section text-center">
+                                            <br />
+                                            <h4 class="mb-4 pb-3">Log In</h4>
+                                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                                        <div class="form-group">
+                                            @*@Html.TextBoxFor(m => m.Email, new { @class = "form-control" })*@
+
+                                            <input type="Email" name="Email" class="form-style" placeholder="Your Email" id="Email" autocomplete="off">
+                                            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+
+                                            <i class="input-icon uil uil-at"></i>
+                                        </div>
+                                        <div class="form-group mt-2">
+                                            @*@Html.PasswordFor(m => m.Password, new { @class = "form-style" })*@
+
+                                            <input type="Password" name="Password" class="form-style" placeholder="Your Password" id="Password" autocomplete="off">
+                                            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger " })
+
+                                            <i class="input-icon uil uil-lock-alt"></i>
+                                        </div>
+                                            <div class="checkbox">
+                                                @Html.CheckBoxFor(m => m.RememberMe, new { @class = "" })
+                                                @*<br />*@
+
+                                                @*<input type="radio">*@
+                                                @Html.LabelFor(m => m.RememberMe)
+                                            </div>
+
+                                            @*<a href="#" class="btn mt-4">submit</a>*@
+                                            <input type="submit" value="Log in" class="btn mt-4" />
+
+                                            <p class="mb-0 mt-4 text-center">
+                                                @Html.ActionLink("Register as a new user", "Register", null, new { @class = "link" })
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
