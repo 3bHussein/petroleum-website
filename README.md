@@ -6,3 +6,4 @@
     http://preview.themeforest.net/item/trendustry-industrial-manufacturing-wordpress-theme/full_screen_preview/22715182
     http://webdesign-finder.com/oktan-steel-production/
     http://webdesign-finder.com/oktan-chemical/
+    http://webdesign-finder.com/oktan/service/power-plant/
